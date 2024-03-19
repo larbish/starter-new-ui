@@ -71,7 +71,7 @@ jobs:
         env:
           NUXT_PUBLIC_STUDIO_API_URL: http://localhost:1337
           NUXT_PUBLIC_STUDIO_TOKENS: 45544f3d7c9e325acfaca322cb201371bdba9cf4fc80e96ad54774f25813aedb
-
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 
       # Deployment job
       - name: Deploy 🚀
