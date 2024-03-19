@@ -1,9 +1,28 @@
-# Nuxt Content
+# Nuxt Studio tutorial
 
-This page corresponds to the `/` route of your website. You can delete it or create another file in the `content/` directory.
+## Integrate UI Pro built-in components...
 
-Try to navigate to [/about](/about). These 2 pages are rendered by the `pages/[...slug].vue` component.
+Such as the `Card` component:
+
+::card
+This is a [Prose component](https://ui.nuxt.com/pro/prose/callout) provided by UI Pro !
+::
 
 ---
 
-Look at the [Content documentation](https://content.nuxtjs.org/) to learn more.
+## ... or integrate your own custom component !
+
+Such as the `PictureCard` we've just implemented:
+
+::picture-card
+---
+intensity: light
+---
+![Alpes landscape](/Mountain.jpg)
+
+#title
+Here is my title
+
+#description
+And finally my description
+::
