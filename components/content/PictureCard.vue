@@ -1,5 +1,5 @@
 <template>
-    <UCard :class="`bg-${color}-200 dark:bg-${color}-800`">
+    <UCard :class="`bg-gray-${intensity} dark:bg-gray-${intensity}`">
       <template #header>
         <div class="flex justify-center text-2xl font-bold">
           <ContentSlot name="title" unwrap="p" />
@@ -7,7 +7,7 @@
       </template>
       <slot />
       <template #footer>
-        <div class="flex justify-center text-gray-500">
+        <div class="flex justify-center text-gray-300">
           <ContentSlot name="description" unwrap="p" />
         </div>
       </template>
@@ -15,11 +15,26 @@
   </template>
   
   <script setup lang="ts">
-  // Generate tailwind class for main colors: bg-blue-200, dark:bg-blue-800 bg-red-200, dark:bg-red-800 bg-green-200, dark:bg-green-800 bg-yellow-200, dark:bg-yellow-800
-  defineProps({
-    color: {
+  const props = defineProps({
+    bgIntensity: {
       type: String,
       default: null
+    }
+  })
+  
+  // Generate tailwind class for gray colors: bg-gray-100 dark:bg-gray-100 bg-gray-300 dark:bg-gray-300 bg-gray-500 dark:bg-gray-500 bg-gray-700 dark:bg-gray-700 bg-gray-900 dark:bg-gray-900
+  const intensity = computed(() => {
+    switch (props.bgIntensity) {
+      case 'light':
+        return 100
+      case 'normal':
+        return 300
+      case 'medium':
+        return 500
+      case 'intense':
+        return 700
+      case 'dark':
+        return 900
     }
   })
   </script>
