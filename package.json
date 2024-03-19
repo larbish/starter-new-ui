@@ -1,4 +1,5 @@
 {
+  "name": "nuxt-content-tutorial",
   "private": true,
   "type": "module",
   "scripts": {
