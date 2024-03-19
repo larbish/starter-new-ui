@@ -1,5 +1,5 @@
 <template>
-    <UCard :class="`ring-${color}-200 dark:ring-${color}-800`">
+    <UCard :class="`bg-${color}-200 dark:bg-${color}-800`">
       <template #header>
         <div class="flex justify-center text-2xl font-bold">
           <ContentSlot name="title" unwrap="p" />
